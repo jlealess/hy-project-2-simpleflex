@@ -1,0 +1,18 @@
+$primary-font: 'Raleway', sans-serif;
+$secondary-font: 'Open Sans', sans-serif;
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    color: $primary-text-color;
+    font-family: $primary-font;
+    font-size: 1.6rem;
+    font-weight: 300;
+}
+
+a {
+    text-decoration: none;
+}
+

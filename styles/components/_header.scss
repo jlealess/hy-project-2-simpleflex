@@ -1,0 +1,37 @@
+.main-header {
+
+    .wrapper {
+        align-items: center;
+        background-color: #ffffff;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.main-nav {
+    ul {
+        @include flexlist;
+
+        li {
+            padding-left: 0;
+
+            a {
+                border-right: 1px solid #e8e8e8;
+                color: $heading-text-color-dark;
+                display: inline-block;
+                font-size: 1.3rem;
+                margin-right: 35px;
+                padding-right: 35px;
+
+                &.current {
+                    color: $red;
+                }
+            }
+
+            &:last-of-type a {
+                margin-right: 0;
+                padding-right: 0;
+            }
+        }
+    }
+}
