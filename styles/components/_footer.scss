@@ -20,8 +20,33 @@
             &__input--text {
                 background: #eeeeee;
                 border: none;
-                flex: 1;
                 padding: 10px;
+            }
+        }
+
+        .post-list {
+            @include unstyledList;
+
+            &__post {
+                display: grid;
+                grid-gap: 15px;
+                grid-template-columns: auto 1fr;
+                margin-bottom: 15px;
+
+                &__date,
+                &__heading {
+                    line-height: 1.2;
+                    margin: 0;
+                    padding: 0 0 5px;
+                }
+
+                &__heading {
+                    font-weight: $font-weight-regular;
+
+                    &__link {
+                        color: $black;
+                    }
+                }
             }
         }
     }
