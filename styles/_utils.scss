@@ -47,6 +47,11 @@ $primary-text-color: #989898;
     flex-flow: row wrap;
 }
 
+@mixin gridCol ($num) {
+    display: grid;
+    grid-template-columns: repeat($num, 1fr);
+}
+
 @mixin splitGradient ($color1, $color2) {
     background: linear-gradient(to right, $color1, $color1 50%, $color2 50%, $color2);
 }
