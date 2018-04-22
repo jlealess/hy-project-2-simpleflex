@@ -13,41 +13,432 @@
 <body>
     <header class="main-header">
         <div class="wrapper">
-            <div class="logo">
+            <div class="main-header__logo">
                 <a href="#">
                     <img src="images/logo.png" alt="Simpleflex">
                 </a>
             </div>
             <nav class="main-nav">
-                <ul>
-                    <li><a href="#" class="current">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#blog">Blog</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                <ul class="main-nav__list">
+                    <li class="main-nav__list__item"><a href="#" class="main-nav__list__item__link main-nav__list__item__link--active">Home</a></li>
+                    <li class="main-nav__list__item"><a class="main-nav__list__item__link" href="#about">About</a></li>
+                    <li class="main-nav__list__item"><a class="main-nav__list__item__link" href="#portfolio">Portfolio</a></li>
+                    <li class="main-nav__list__item"><a class="main-nav__list__item__link" href="#blog">Blog</a></li>
+                    <li class="main-nav__list__item"><a class="main-nav__list__item__link" href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <main class="main-content" id="mainContent">
-        <section id="about">
-            <article class="about"></article>
-            <article class="skills">
+        <section id="hero" class="row row--hero row--secondary row--divot-down">
+            <div class="wrapper">
+                <div class="row--hero__text">
+                    <h1 class="heading heading--primary row--hero__heading--primary">
+                        <span class="row--hero__heading--primary__highlight--dark">Everything</span> you need
+                    </h1>
+                    <p class="row--hero__paragraph--lead">
+                        Simpleflex is best solution for you, so you can present your business and services properly.
+                    </p>
+                    <a href="#" class="button button--primary button--primary--contrast">Purchase this theme</a>
+                </div>
+                <div class="row--hero__img-container">
+                <img src="images/mockup-1.png" alt="" class="row--hero__img-container__img">
+
+                </div>
+            </div>
+        </section>
+        <section id="about" class="section section--about">
+            <article class="row row--about">
+                <div class="wrapper">
+                    <h2 class="heading heading--primary">About Us</h2>
+                    <p class="row__paragraph--lead">Sanctus sea sed takimata ut vero voluptua. Stet clita kasd gubergren, no sea takimata sanctus est.</p>
+                    <ul class="card-list card-list--features">
+                        <li class="card-list__item card-list__item--secondary card-list__item--light card-list__item--inset">
+                            <img src="images/icon-modern.png" alt="" class="card-list__item__icon">
+                            <h3 class="heading heading--secondary">Modern</h3>
+                            <p class="card-list__item__body">
+                                 Seiam nonumy eirmod tempor invidunt ut labore et dolore magna.
+                            </p>
+                        </li>
+                        <li class="card-list__item card-list__item--tertiary card-list__item--light card-list__item--inset">
+                            <img src="images/icon-simple.png" alt="" class="card-list__item__icon">
+                            <h3 class="heading heading--secondary">Simple</h3>
+                            <p class="card-list__item__body">
+                                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr sed diam.
+                            </p>
+                        </li>
+                        <li class="card-list__item card-list__item--primary card-list__item--light card-list__item--inset">
+                            <img src="images/icon-flexible.png" alt="" class="card-list__item__icon">
+                            <h3 class="heading heading--secondary">Flexible</h3>
+                            <p class="card-list__item__body">
+                                 Quis aute iure reprehenderit voluptate velit esse cillum dolore.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
             </article>
-            <article class="projects"></article>
-            <article class="team"></article>
+            <article class="row row--skills">
+                <div class="wrapper">
+                    <h3 class="heading heading--primary">Our Skills</h3>
+                    <p class="row__paragraph--lead">AIR is focusing on Web Design / WP Development / HTML Integration
+                    </p>
+                    <ul class="skills-list">
+                        <li class="skills-list__item">
+                            <span class="skills-list__item__skill-rating skills-list__item__skill-rating--primary">75</span>
+                            <h3 class="heading heading--secondary">Web Design</h3>
+                            <p class="skills-list__item__paragraph">Excepteur sint obcaecat cupiditat non proident sunt in culpa</p>
+                        </li>
+                        <li class="skills-list__item">
+                            <span class="skills-list__item__skill-rating skills-list__item__skill-rating--secondary">62</span>
+                            <h3 class="heading heading--secondary">WordPress</h3>
+                            <p class="skills-list__item__paragraph">Qui officia deserunt mollit anim id est laborum wisi enim ad</p>
+                        </li>
+                        <li class="skills-list__item">
+                            <span class="skills-list__item__skill-rating skills-list__item__skill-rating--tertiary">57</span>
+                            <h3 class="heading heading--secondary">jQuery</h3>
+                            <p class="skills-list__item__paragraph">Minim veniam, quis nostrud exerci tation ullamcorper suscipit</p>
+                        </li>
+                        <li class="skills-list__item">
+                            <span class="skills-list__item__skill-rating skills-list__item__skill-rating--primary">87</span>
+                            <h3 class="heading heading--secondary">HTML / CSS</h3>
+                            <p class="skills-list__item__paragraph">
+                             Fobortis nisl ut aliquip commodo consequat
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+            <aside class="aside row row--tertiary row--divot-down">
+                <div class="wrapper">
+                    <blockquote class="aside__pullquote">
+                        <p class="aside__pullquote__body">Design to express, not to impress.</p>
+                        <cite class="aside__pullquote__cite">John Tanedo</cite>
+                    </blockquote>
+                </div>
+            </aside>
+            <article class="row row--projects">
+                <div class="wrapper">
+                    <h3 class="heading heading--primary">Latest Projects</h3>
+                    <p class="row__paragraph--lead">Sanctus sea sed takimata ut vero voluptua. Stet clita kasd gubergren, no sea takimata sanctus est.
+                    </p>
+
+                </div>
+            </article>
+            <article class="row row--team">
+                <div class="wrapper">
+                    <h3 class="heading heading--primary">Meet the Team</h3>
+                    <p class="row__paragraph--lead">A proud group of individuals who came together in a perfect unity to present you with this
+                    </p>
+                    <ul class="card-list card-list--team">
+                        <li class="card-list__item card-list__item--tertiary">
+                            <img src="images/headshot-1.png" alt="Dean Pelton" class="card-list__item__profile-pic">
+                            <ul class="social-links-list">
+                                <li class="social-links-list__item">
+                                    <a href="#" class="social-links-list__item__link social-links-list__item__link--facebook">
+                                        <i class="fab fa-facebook-f fa-fw" title="Dean Pelton on Facebook"></i>
+                                    </a>
+                                </li>
+                                <li class="social-links-list__item">
+                                    <a href="#" class="social-links-list__item__link social-links-list__item__link--twitter">
+                                        <i class="fab fa-twitter fa-fw" title="Dean Pelton on Twitter"></i>
+                                    </a>
+                                </li>
+                                <li class="social-links-list__item">
+                                    <a href="#" class="social-links-list__item__link social-links-list__item__link--pinterest">
+                                        <i class="fab fa-pinterest-p fa-fw" title="Dean Pelton on Pinterest"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="card-list__item card-list__item--tertiary">
+                            <img src="images/headshot-2.png" alt="Britta Perry" class="card-list__item__profile-pic">
+                            <ul class="social-links-list">
+                                <li class="social-links-list__item">
+                                    <a href="#" class="social-links-list__item__link social-links-list__item__link--facebook">
+                                        <i class="fab fa-facebook-f fa-fw" title="Britta Perry on Facebook"></i>
+                                    </a>
+                                </li>
+                                <li class="social-links-list__item">
+                                    <a href="#" class="social-links-list__item__link social-links-list__item__link--dribbble">
+                                        <i class="fab fa-dribbble fa-fw" title="Britta Perry on Dribbble"></i>
+                                    </a>
+                                </li>
+                                <li class="social-links-list__item">
+                                    <a href="#" class="social-links-list__item__link social-links-list__item__link--pinterest">
+                                        <i class="fab fa-pinterest-p fa-fw" title="Britta Perry on Pinterest"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="card-list__item card-list__item--tertiary">
+                            <img src="images/headshot-3.png" alt="Jeff Winger" class="card-list__item__profile-pic">
+                            <ul class="social-links-list">
+                                <li class="social-links-list__item">
+                                    <a href="#" class="social-links-list__item__link social-links-list__item__link--facebook">
+                                        <i class="fab fa-facebook-f fa-fw" title="Jeff Winger on Facebook"></i>
+                                    </a>
+                                </li>
+                                <li class="social-links-list__item">
+                                    <a href="#" class="social-links-list__item__link social-links-list__item__link--twitter">
+                                        <i class="fab fa-twitter fa-fw" title="Jeff Winger on Twitter"></i>
+                                    </a>
+                                </li>
+                                <li class="social-links-list__item">
+                                    <a href="#" class="social-links-list__item__link social-links-list__item__link--flickr">
+                                        <i class="fab fa-flickr fa-fw" title="Jeff Winger on Flickr"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="card-list__item card-list__item--tertiary">
+                            <img src="images/headshot-4.png" alt="Shirley Bennett" class="card-list__item__profile-pic">
+                            <ul class="social-links-list">
+                                <li class="social-links-list__item">
+                                    <a href="#" class="social-links-list__item__link social-links-list__item__link--facebook">
+                                        <i class="fab fa-facebook-f fa-fw" title="Shirley Bennett on Facebook"></i>
+                                    </a>
+                                </li>
+                                <li class="social-links-list__item">
+                                    <a href="#" class="social-links-list__item__link social-links-list__item__link--google">
+                                        <i class="fab fa-google-plus-g fa-fw" title="Shirley Bennett on Google Plus"></i>
+                                    </a>
+                                </li>
+                                <li class="social-links-list__item">
+                                    <a href="#" class="social-links-list__item__link social-links-list__item__link--linked-in">
+                                        <i class="fab fa-linkedin-in fa-fw" title="Shirley Bennett on LinkedIn"></i> 
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+            <aside class="aside row row--primary">
+                <div class="wrapper">
+                    <ul class="stats-list">
+                        <li class="stats-list__item">
+                            <img src="images/icon-1.png" alt="" class="stats-list__item__icon">
+                            <span class="stats-list__item__stat">2500</span>
+                            <a href="#" class="button button--primary--contrast">Happy clients</a>
+                        </li>
+                        <li class="stats-list__item">
+                            <img src="images/icon-2.png" alt="" class="stats-list__item__icon">
+                            <span class="stats-list__item__stat">650</span>
+                            <a href="#" class="button button--primary--contrast">Projects made</a>
+                        </li>
+                        <li class="stats-list__item">
+                            <img src="images/icon-3.png" alt="" class="stats-list__item__icon">
+                            <span class="stats-list__item__stat">5780</span>
+                            <a href="#" class="button button--primary--contrast">Letters sent</a>
+                        </li>
+                        <li class="stats-list__item">
+                            <img src="images/icon-4.png" alt="" class="stats-list__item__icon">
+                            <span class="stats-list__item__stat">3400</span>
+                            <a href="#" class="button button--primary--contrast">Briefs wrote</a>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
         </section>
-        <section id="portfolio">
-            <article class="portfolio"></article>
+        <section id="portfolio" class="section row row--portfolio">
+            <div class="wrapper">
+                <h2 class="heading heading--primary">Our Portfolio</h2>
+                <p class="row__paragraph--lead">Sanctus sea sed takimata ut vero voluptua. Stet clita kasd gubergren, no sea takimata sanctus est.
+                </p> 
+            </div>
+            <div class="gallery">
+                <ul class="gallery-nav-list">
+                    <li class="gallery-nav-list__item">
+                        <a href="#" class="gallery-nav-list__item__link gallery-nav-list__item__link--active">
+                            All
+                        </a>
+                    </li>
+                    <li class="gallery-nav-list__item">
+                        <a href="#" class="gallery-nav-list__item__link">
+                            Videos
+                        </a>
+                    </li>
+                    <li class="gallery-nav-list__item">
+                        <a href="#" class="gallery-nav-list__item__link">
+                            Illustrations
+                        </a>
+                    </li>
+                    <li class="gallery-nav-list__item">
+                        <a href="#" class="gallery-nav-list__item__link">
+                            Print
+                        </a>
+                    </li>
+                    <li class="gallery-nav-list__item">
+                        <a href="#" class="gallery-nav-list__item__link">
+                            Misc
+                        </a>
+                    </li>
+                </ul>
+                <ul class="gallery-list">
+                        <li class="gallery-list__item">
+                            <a href="#" class="gallery-list__item__link gallery-list__item__link--img">
+                                <img src="images/portfolio-1.png" alt="Artistic workspace with a notebook, candle, and plant">
+                            </a>
+                            <a href="#" class="gallery-list__item__link gallery-list__item__link--headline">
+                                 Kopazito
+                            </a>
+                        </li>
+                        <li class="gallery-list__item">
+                            <a href="#" class="gallery-list__item__link gallery-list__item__link--img">
+                                <img src="images/portfolio-2.png" alt="Laptop computer screen showing drawing of a denim jacket">
+                            </a>
+                            <a href="#" class="gallery-list__item__link gallery-list__item__link--headline">
+                                 I love Picles
+                            </a>
+                        </li>
+                        <li class="gallery-list__item">
+                            <a href="#" class="gallery-list__item__link gallery-list__item__link--img">
+                                <img src="images/portfolio-3.png" alt="Collage of figure drawings on an abstract background">
+                            </a>
+                            <a href="#" class="gallery-list__item__link gallery-list__item__link--headline">
+                                Shotmen
+                            </a>
+                        </li>
+                        <li class="gallery-list__item">
+                            <a href="#" class="gallery-list__item__link gallery-list__item__link--img">
+                                <img src="images/portfolio-4.png" alt="Closeup of a hand using a stylus to draw on a tablet computer">
+                            </a>
+                            <a href="#" class="gallery-list__item__link gallery-list__item__link--headline">
+                                Voodoo
+                            </a>
+                        </li>
+                        <li class="gallery-list__item">
+                            <a href="#" class="gallery-list__item__link gallery-list__item__link--img">
+                                <img src="images/portfolio-5.png" alt="Coloured pencil crayons placed on a sketchbook">
+                            </a>
+                            <a href="#" class="gallery-list__item__link gallery-list__item__link--headline">
+                                 Barbapapa
+                            </a>
+                        </li>
+                        <li class="gallery-list__item">
+                            <a href="#" class="gallery-list__item__link gallery-list__item__link--img">
+                                <img src="images/portfolio-6.png" alt="Colourful graffiti mural of a japanese person in traditional attire">
+                            </a>
+                            <a href="#" class="gallery-list__item__link gallery-list__item__link--headline">
+                                 Ron Weasley
+                            </a>
+                        </li>
+                        <li class="gallery-list__item">
+                            <a href="#" class="gallery-list__item__link gallery-list__item__link--img">
+                                <img src="images/portfolio-7.png" alt="Closeup of a hand using a stylus on a tablet computer">
+                            </a>
+                            <a href="#" class="gallery-list__item__link gallery-list__item__link--headline">
+                                 My Diamond Returns !
+                            </a>
+                        </li>
+                        <li class="gallery-list__item">
+                            <a href="#" class="gallery-list__item__link gallery-list__item__link--img">
+                                <img src="images/portfolio-8.png" alt="An assortment of line-art drawings on stickers">
+                            </a>
+                            <a href="#" class="gallery-list__item__link gallery-list__item__link--headline">
+                                 I Can Pay My Bills
+                            </a>
+                        </li>
+                    </ul>
+            </div>
         </section>
-        <section id="blog"></section>
-        <section id="contact"></section>
+        <section id="blog" class="section row row--blog">
+            <div class="wrapper">
+                <h2 class="heading heading--primary">Our Blog</h2>
+                <p class="row__paragraph--lead">Latest from our blog, nam liber tempor cum soluta nobis eleifend option congue nihil.
+                </p>
+            </div>
+
+        </section>
+        <section id="contact" class="contact">
+            <div class="aside row row--secondary">
+                <div class="wrapper">
+                    <dl class="contact-info">
+                        <dt class="contact-info__label visually-hidden">
+                            Telephone
+                        </dt>
+                        <dd class="contact-info__value contact-info__value--tel">
+                            <a class="contact-info__value--tel__link" href="tel:+91 544 567 8943">+91 544 567 8943</a>
+
+                        </dd>
+                        <dt class="contact-info__label visually-hidden">
+                            Email
+                        </dt>
+                        <dd class="contact-info__value contact-info__value--email">
+                            <a href="mailto:info@simpleflex.com" class="contact-info__value--email__link button button--primary button--primary--contrast button--large">
+                                 info@simpleflex.com
+                            </a>
+                        </dd>
+                        <dt class="contact-info__label visually-hidden">
+                            Address
+                        </dt>
+                        <dd class="contact-info__value contact-info__value--address">
+                            8605 Santa Monica Blvd, Los Angeles, California 97845, US
+                        </dd>
+                    </dl>
+                </div><!-- /wrapper -->
+            </div><!-- /row--secondary -->
+                <div class="contact__map-responsive">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13217.102818940737!2d-118.3882128325663!3d34.0880768805961!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2bebb02602b33%3A0x60072fd68413ee3c!2s8605+Santa+Monica+Blvd%2C+West+Hollywood%2C+CA+90069%2C+USA!5e0!3m2!1sen!2sca!4v1524327935640"
+                    width="600" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+        </section>
 
     </main>
     <footer class="main-footer">
-        <div class="copyright">
+        <aside class="aside main-footer__aside row">
             <div class="wrapper">
-                <p>© Copyright 2018. Simpleflex Template by <a href="#">DX Templates</a></p>
+                <ul class="widget-list main-footer__aside__widget-list">
+                    <li class="widget-list__item">
+                        <article class="widget-list__item__widget widget-list__item__widget-text">
+                            <h2 class="heading heading--secondary heading--secondary-dark">Text Widget</h2>
+                            <p class="paragraph widget-list__item__widget__paragraph">
+                                 At vero eos et accusam et justo duo dolores et ea rebum.. Lorem ipsum dolor sit amet. Nam liber tempor soluta nobis eleifend
+                                option congue nihil imperdiet doming id quod mazim placerat.
+                            </p>
+                        </article>
+    
+                    </li>
+                    <li class="widget-list__item">
+                        <article class="widget-list__item__widget widget-list__item__widget-posts">
+                            <h2 class="heading heading--secondary heading--secondary-dark">Recent Posts</h2>
+                            <p class="paragraph widget-list__item__widget__paragraph">
+                                At vero eos et accusam et justo duo dolores et ea rebum.. Lorem ipsum dolor sit amet. Nam liber tempor soluta nobis eleifend
+                                option congue nihil imperdiet doming id quod mazim placerat. facer possim assum. Ut wisi enim ad minim veniam, quis
+                                nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+                            </p>
+                        </article>
+                    </li>
+                    <li class="widget-list__item">
+                        <article class="widget-list__item__widget widget-list__item__widget-subscribe">
+                            <h2 class="heading heading--secondary heading--secondary-dark">Our Newsletter</h2>
+                            <p class="paragraph widget-list__item__widget__paragraph">Please, subscribe to our latest news to be updated.</p>
+                            <form action="#" method="POST" class="form widget-list__item__widget-subscribe__form">
+                                <label for="subscribe" class="visually-hidden"></label>
+                                <input type="text" id="subscribe" name="subscribe" class="form-input--text widget-list__item__widget-subscribe__form__input" required>
+                                <input type="submit" name="newsletterSubscribe" class="button button--secondary form-input--submit widget-list__item__widget-subscribe__form__input" value="Send">
+
+                            </form>
+                        </article>
+                    </li>
+                    <li class="widget-list__item">
+                        <article class="widget-list__item__widget widget-list__item__widget-gallery">
+                            <h2 class="heading heading--secondary heading--secondary-dark">Flickr Widget</h2>
+                            <p class="paragraph widget-list__item__widget__paragraph">
+                                At vero eos et accusam et justo duo dolores et ea rebum.. Lorem ipsum dolor sit amet. Nam liber tempor soluta nobis eleifend
+                                option congue nihil imperdiet doming id quod mazim placerat. facer possim assum. Ut wisi enim ad minim veniam, quis
+                                nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+                            </p>
+                        </article>
+                    
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <div class="main-footer__copyright">
+            <div class="wrapper">
+                <p class="main-footer__copyright__text">© Copyright 2018. Simpleflex Template by <a href="#">DX Templates</a></p>
             </div>
         </div>
     </footer>

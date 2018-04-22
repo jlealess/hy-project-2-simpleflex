@@ -1,3 +1,5 @@
+$font-weight-bold: 700;
+$font-weight-regular: 300;
 $primary-font: 'Raleway', sans-serif;
 $secondary-font: 'Open Sans', sans-serif;
 
@@ -9,10 +11,145 @@ body {
     color: $primary-text-color;
     font-family: $primary-font;
     font-size: 1.6rem;
-    font-weight: 300;
+    font-weight: $font-weight-regular;
 }
 
 a {
     text-decoration: none;
+}
+
+/* ==============================================
+Headings
+============================================== */
+
+.heading {
+    color: $white;
+    line-height: 1.25;
+    text-align: center;
+
+    &--primary {
+        font-size: 6rem;
+        font-weight: $font-weight-regular;
+        margin: 0 0 20px;
+        text-transform: uppercase;
+    }
+
+    &--secondary {
+        font-size: 2.4rem;
+
+        &-dark {
+            color: $black;
+        }
+    }
+}
+
+/* ==============================================
+Buttons
+============================================== */
+.button {
+    background-color: transparent;
+    border: 5px solid $white;
+    font-weight: $font-weight-bold;
+    padding: 15px;    
+    text-transform: uppercase;
+
+    &--primary {
+        color: $white;
+
+        &--contrast {
+            color: $black;
+        }
+    }
+
+    &--secondary {
+        border-color: $red;
+        color: $red;
+    }
+}
+
+
+/* ==============================================
+Articles
+============================================== */
+
+.row {
+    &__paragraph--lead {
+        font-size: 2rem;
+        line-height: 1.5;
+        margin: 0 auto 50px;
+        padding-bottom: 35px;
+        position: relative;
+        max-width: 50ch;
+        text-align: center;
+
+        &::after {
+            content: "";
+            border: .5px solid $primary-text-color;
+            bottom: 0;
+            left: calc(50% - (20rem / 2));
+            position: absolute;
+            width: 20rem;
+        }
+    }
+}
+
+/* ==============================================
+Cards
+============================================== */
+
+.card-list {
+    &__item {
+        text-align: center;
+
+        &__body {
+            line-height: 1.5;
+        }
+    }
+}
+
+/* ==============================================
+Skills section styles
+============================================== */
+.skills-list {
+    &__item__skill-rating {
+        color: $white;
+        font-family: $secondary-font;
+        font-size: 6rem;
+        font-weight: $font-weight-regular;
+    }
+}
+
+
+/* ==============================================
+Stats section styles
+============================================== */
+.stats-list {
+
+    &__item {
+        text-align: center;
+
+        &__stat {
+            color: $black;
+            font-family: $secondary-font;
+            font-size: 6rem;
+            font-weight: $font-weight-bold; 
+            margin: 15px 0 10px;   
+        }
+
+    }
+}
+
+/* ==============================================
+Footer
+============================================== */
+
+.main-footer__aside {
+    .heading--secondary {
+        padding-bottom: 0;
+    }
+
+    .paragraph {
+        line-height: 1.5;
+    }
 }
 

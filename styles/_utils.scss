@@ -1,14 +1,58 @@
 /* colors */  
 $black: #242424;
+$dark-yellow: #f3c95e;
+$dark-green: #a3ca61;
+$dark-red: #f76c6c;
 $green: rgb(168, 209, 100);
-$heading-text-color-dark: #343434;
-$heading-text-color-light: #ffffff;
+$light-black: #343434;
 $red: rgb(255, 111, 111);
-$primary-text-color: #989898;
+$white: #ffffff;
 $yellow: rgb(251, 207, 97);
 
-@mixin flexlist {
+$bold-weight: 700;
+$heading-text-color-dark: $light-black;
+$heading-text-color-light: $white;
+$primary-text-color: #989898;
+
+@mixin divotDown($color1, $color2) {
+    --top: 40px;
+    --side: 50px;
+
+    position: relative;
+
+    &::before,
+    &::after {
+        content: '';
+        margin-left: 0;
+        left: 50%;
+        height: 0;
+        position: absolute;
+        top: 100%;
+        width: 0;
+        z-index: 10;
+    }
+    &::after {
+        border-top: solid var(--top) $color2;
+        border-right: solid var(--side) transparent;
+    }
+    &::before {
+        margin-left: calc(var(--side) * -1);
+        border-top: solid var(--top) $color1;
+        border-left: solid var(--side) transparent;
+    }
+}
+/* ^^ adapted from https://css-tricks.com/examples/ShapesOfCSS/ */
+
+@mixin flexRowWrap {
     display: flex;
+    flex-flow: row wrap;
+}
+
+@mixin splitGradient ($color1, $color2) {
+    background: linear-gradient(to right, $color1, $color1 50%, $color2 50%, $color2);
+}
+
+@mixin unstyledList {
     list-style: none;
     margin: 0;
     padding: 0;

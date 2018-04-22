@@ -1,0 +1,419 @@
+/* ==============================================
+General row styles
+============================================== */
+.row--highlight-primary {
+    @include splitGradient($green, $dark-green);
+}
+
+.row--highlight-secondary {
+    @include splitGradient($yellow, $dark-yellow);
+}
+
+.row--highlight-tertiary {
+    @include splitGradient($red, $dark-red);
+}
+
+.row {
+    padding: 80px 0;
+
+    &--blog,
+    &--skills,
+    &--team {
+        background-color: $black;
+    }
+
+    &--about,
+    &--portfolio,
+    &--projects {
+        background-color: $light-black;
+    }
+
+    &--primary {
+        @extend .row--highlight-primary;
+        @include divotDown($green, $dark-green);
+    }
+
+    &--secondary {
+        @extend .row--highlight-secondary;
+        @include divotDown($yellow, $dark-yellow);
+    }
+
+    &--tertiary {
+        @extend .row--highlight-tertiary;
+        @include divotDown($red, $dark-red);
+    }
+}
+
+/* ==============================================
+Card styles
+============================================== */
+
+.card-list__item {
+    background: $light-black;
+    border-bottom-width: 8px;
+    border-bottom-style: solid;
+    padding-bottom: 25px;
+
+    &--primary {
+        border-color: $green;
+    }
+
+    &--secondary {
+        border-color: $yellow;
+    }
+
+    &--tertiary {
+        border-color: $red;
+    }
+}
+
+/* ==============================================
+Hero styles
+============================================== */
+
+.row--hero {
+    .wrapper {
+        display: grid;
+        grid-template-columns: 510px 1fr;
+        align-items: center;
+
+        & > * {
+            grid-row: 1;
+        }
+     }
+
+    &__text {
+        grid-column: 1 / span 4;
+        // flex: 2 0 40%;
+     }
+
+    &__img-container {
+        // flex: 1 2 60%;
+        grid-column: 5 / span 6;
+        z-index: 10;
+    }
+
+    &__heading--primary {
+        text-align: left;
+
+        &__highlight--dark {
+            color: $black;
+            display: block;
+            font-weight: $font-weight-bold;
+            line-height: .75;
+        }
+    }
+
+    &__paragraph--lead {
+        color: $light-black;
+        font-size: 2rem;
+        line-height: 1.5;
+        margin-bottom: 50px;
+        text-align: left;
+    }
+}
+
+/* ==============================================
+Pullquote styles
+============================================== */
+
+.aside {
+    text-align: center;
+}
+
+.aside__pullquote {
+    &__body,
+    &__cite {
+        position: relative;
+    }
+    &__body {
+        color: $light-black;
+        font-size: 6rem;
+        font-weight: $bold-weight;
+        line-height: 1;
+        margin: 30px auto;
+        max-width: 15ch;
+
+        &::before,
+        &::after {
+            color: $white;
+            font-size: 14rem;
+            position: absolute;
+            top: -3rem;
+        }
+        &::before {
+            content: "“";
+            left: -8rem;
+        }
+        &::after {
+            content: "”";
+            right: -7rem;
+        }
+    }
+    &__cite {
+        color: $white;
+        font-size: 4rem;
+        font-style: normal;
+
+            &::before,
+            &::after {
+                content: "";
+                border: 1px solid $white;
+                top: 50%;
+                position: absolute;
+                width: 1.5rem;
+            }
+            &::before {
+                left: -3rem;
+            }
+
+            &::after {
+                right: -3rem;
+            }
+
+    }
+}
+
+/* ==============================================
+About styles
+============================================== */
+
+.card-list {
+   &__item--light {
+        background-color: #3c3c3c;
+    }
+}
+
+/* ==============================================
+Skills styles
+============================================== */
+
+.skills-list {
+    @include unstyledList;
+    text-align: center;
+
+    display: grid;
+    grid-gap: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+
+    &__item {
+        line-height: 1.5;
+    }
+}
+
+/* ==============================================
+Stats styles
+============================================== */
+
+.stats-list {
+    @include unstyledList;
+    display: grid;
+    grid-gap: 50px;
+    grid-template-columns: repeat( auto-fit, minmax(150px, 1fr) );
+
+    &__item {
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-rows: 1fr auto auto;
+        padding: 0 25px;
+
+            &__icon {
+                display: block;
+                margin: 0 auto;
+            }
+
+    }
+}
+
+/* ==============================================
+Team styles
+============================================== */
+
+.card-list {
+    @include unstyledList;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat( auto-fit, minmax(150px, 1fr) );
+
+    &__item {
+        background-color: $light-black;
+        margin: 0 auto;
+
+        &--light {
+            background-color: #3c3c3c;
+        }
+
+        &--inset {
+            padding: 50px 40px;
+        }
+
+        &__body {
+            margin-bottom: 0;
+        }
+    }
+
+    &--team {
+        &__item {
+            max-width: 300px;
+        }
+    }
+
+}
+
+.social-links-list {
+    @include unstyledList;
+    display: flex;
+    justify-content: center;
+    padding: 25px 0 5px;
+
+    &__item__link {
+        color: $white;
+        display: inline-block;
+        margin: 0 5px;
+        padding: 5px;
+
+        &:hover {
+            opacity: 0.9;
+        }
+
+        &--dribbble {
+            background-color: #e7719a;
+        }
+
+        &--facebook {
+            background-color: #587dba;
+        }
+
+        &--flickr {
+            background-color: #ec3684;
+        }
+
+        &--google {
+            background-color: #be4c3c;
+        }
+
+        &--linked-in {
+            background-color: #276498;
+        }
+
+        &--pinterest {
+            background-color: #c03028;
+        }
+
+        &--twitter {
+            background-color: #49abea;
+        }
+    }
+
+}
+
+
+/* ==============================================
+Portfolio
+============================================== */
+.gallery-list {
+    @include unstyledList;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    &__item {
+
+        &__link {
+            background: $white;
+            display: block;
+            margin: 0 auto;
+            max-width: 480px;
+            object-fit: cover;
+
+            &--headline {
+                color: $black;
+                font-size: 1.2rem;
+                font-weight: $font-weight-bold;
+                line-height: 1;
+                padding: 23px 0 25px;
+                text-align: center;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+.gallery-nav-list {
+    @include unstyledList;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+
+    &__item {
+
+        &__link {
+            color: $white;
+            display: block;
+            font-size: 1.2rem;
+            font-weight: $font-weight-bold;
+            letter-spacing: 1px;
+            padding: 0 20px;
+            text-align: center;
+            text-transform: uppercase;
+
+            &--active {
+                color: $red;
+            }
+        }
+    }
+}
+
+
+/* ==============================================
+Contact section styles
+============================================== */
+/* responsive map embed styling from: https://www.ostraining.com/blog/coding/responsive-google-maps/ */
+.contact {
+
+    &__map-responsive {
+        overflow: hidden;
+        padding-bottom: 40%;
+        position: relative;
+        height: 0;
+    }
+
+    &__map-responsive iframe {
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+    }
+
+    &-info {
+
+        &__value {
+            font-family: $secondary-font;
+
+            &--email__link, 
+            &--tel__link {
+                display: inline-block;
+            }
+
+            &--email__link {
+                color: $black;
+                font-size: 8rem;
+                margin: 15px 0 20px;
+                padding: 10px 70px;
+                text-transform: none;
+            }
+
+            &--tel__link {                
+                color: $white;
+                font-size: 4rem;
+                font-weight: $font-weight-bold;
+            }
+
+            &--address {
+                color: $light-black;
+                font-size: 3rem;
+            }
+        }
+    }
+}

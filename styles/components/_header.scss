@@ -1,21 +1,24 @@
 .main-header {
+    // background: linear-gradient(to right, #ffffff, #ffffff 50%, #fafafa 50%, #fafafa);
+    @include splitGradient($white, darken($white, 2));
 
     .wrapper {
         align-items: center;
-        background-color: #ffffff;
         display: flex;
         justify-content: space-between;
+        padding: 25px 0;
     }
 }
 
 .main-nav {
-    ul {
-        @include flexlist;
+    &__list {
+        @include unstyledList;
+        @include flexRowWrap;
 
-        li {
+        &__item {
             padding-left: 0;
 
-            a {
+            &__link {
                 border-right: 1px solid #e8e8e8;
                 color: $heading-text-color-dark;
                 display: inline-block;
@@ -23,7 +26,7 @@
                 margin-right: 35px;
                 padding-right: 35px;
 
-                &.current {
+                &--active {
                     color: $red;
                 }
             }
