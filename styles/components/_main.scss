@@ -510,11 +510,19 @@ Contact section styles
             color: $primary-text-color;
             display: block;
             padding: 20px;
+            transition: all 0.5s ease;
             width: 100%;
 
             &--textarea {
                 height: 200px;
                 margin-bottom: 30px;
+            }
+
+            &:focus {
+                background: $white;
+                color: $black;
+                font-weight: $font-weight-bold;
+                outline: 3px solid $yellow;
             }
         }
 
