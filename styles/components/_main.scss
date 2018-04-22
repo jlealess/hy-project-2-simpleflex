@@ -84,11 +84,9 @@ Hero styles
 
     &__text {
         grid-column: 1 / span 4;
-        // flex: 2 0 40%;
      }
 
     &__img-container {
-        // flex: 1 2 60%;
         grid-column: 5 / span 6;
         z-index: 10;
     }
@@ -114,6 +112,30 @@ Hero styles
 }
 
 /* ==============================================
+Projects styles
+============================================== */
+
+.slider {
+    align-items: center;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: auto 1fr auto;
+    justify-items: center;
+
+    &__controls {
+        background: transparent;
+        border: none;
+        color: $white;
+        font-size: 3.5rem;
+        transition: all 0.5s ease;
+
+        &:hover {
+            color: rgba(255,255,255,0.7);
+        }
+    }
+}
+
+/* ==============================================
 Pullquote styles
 ============================================== */
 
@@ -129,7 +151,7 @@ Pullquote styles
     &__body {
         color: $light-black;
         font-size: 6rem;
-        font-weight: $bold-weight;
+        font-weight: $font-weight-bold;
         line-height: 1;
         margin: 30px auto;
         max-width: 15ch;
@@ -368,7 +390,7 @@ Portfolio
 /* ==============================================
 Contact section styles
 ============================================== */
-/* responsive map embed styling from: https://www.ostraining.com/blog/coding/responsive-google-maps/ */
+/* responsive map embed styling adapted from: https://www.ostraining.com/blog/coding/responsive-google-maps/ */
 .contact {
 
     &__map-responsive {
