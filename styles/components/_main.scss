@@ -322,7 +322,50 @@ Blog styles
 
 
             &__link--img {
-                display: block;
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr;
+                align-items: center;
+                justify-items: center;
+
+                & > * {
+                    grid-column: 1;
+                    grid-row: 1;
+                }
+
+                .controls {
+                    &--align-bottom {
+                        align-self: end;
+                        padding-bottom: 25px;
+                    }
+
+                    .button--round {
+                        border: none;
+                        border-radius: 50%;
+                        font-size: 3rem;
+                        padding: 1rem .6rem 1rem 1rem;
+                        text-align: center;
+                    }
+
+                    &__list {
+                        @include unstyledList;
+                        display: flex;
+
+                        &__item {
+
+                            &__link {
+                                background: transparent;
+                                border: none;
+                                color: $white;
+
+                                &--active {
+                                    color: $black;
+                                }
+                            }
+                        }
+                    }
+                }
+
                 
                 img {
                     object-fit: cover;
