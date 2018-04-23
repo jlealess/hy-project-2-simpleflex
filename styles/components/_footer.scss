@@ -3,10 +3,11 @@
     text-align: left;
 
     .heading {
+        margin-top: 0;
         text-align: left;
     }
 
-    &__widget-list {
+    .widget-list {
         @include unstyledList;
         display: grid;
         grid-gap: 40px;
@@ -61,4 +62,16 @@
     a {
         color: $white;
     }
+}
+
+@media screen and (min-width: 820px) and (max-width: 1170px) {
+    .row--4-up {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .main-footer__aside {
+        .widget-list {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }  
 }
