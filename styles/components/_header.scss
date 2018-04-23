@@ -1,12 +1,12 @@
 .main-header {
-    // background: linear-gradient(to right, #ffffff, #ffffff 50%, #fafafa 50%, #fafafa);
     @include splitGradient($white, darken($white, 2));
 
     .wrapper {
         align-items: center;
         display: flex;
         justify-content: space-between;
-        padding: 25px 0;
+        padding-top: 25px;
+        padding-bottom: 25px;
     }
 }
 

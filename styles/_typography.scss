@@ -10,8 +10,12 @@ html {
 body {
     color: $primary-text-color;
     font-family: $primary-font;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: $font-weight-regular;
+
+    @media (min-width: 600px) {
+        font-size: 1.6rem;
+    }
 }
 
 a {
@@ -28,17 +32,25 @@ Headings
     text-align: center;
 
     &--primary {
-        font-size: 6rem;
+        font-size: 4rem;
         font-weight: $font-weight-regular;
         margin: 0 0 20px;
         text-transform: uppercase;
+
+        @media (min-width: 700px) {
+            font-size: 6rem;
+        }
     }
 
     &--secondary {
-        font-size: 2.4rem;
+        font-size: 2rem;
 
         &-dark {
             color: $black;
+        }
+
+        @media (min-width: 700px) {
+            font-size: 2.4rem;
         }
     }
 }
@@ -74,7 +86,7 @@ Articles
 
 .row {
     &__paragraph--lead {
-        font-size: 2rem;
+        font-size: 1.5rem;
         line-height: 1.5;
         margin: 0 auto 50px;
         padding-bottom: 35px;
@@ -89,6 +101,10 @@ Articles
             left: calc(50% - (20rem / 2));
             position: absolute;
             width: 20rem;
+        }
+
+        @media screen and (min-width: 600px) {
+            font-size: 2rem;
         }
     }
 }
