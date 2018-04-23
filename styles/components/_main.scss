@@ -116,6 +116,40 @@ Hero styles
     }
 }
 
+.hero__controls {
+
+    &__list {
+        @include unstyledList;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: 40px;
+
+        &__item {
+
+            &__link {
+                background: transparent;
+                border: none;
+                color: $white;
+
+                // svg {
+                //     border: 2px solid $white;
+                //     border-radius: 50%;
+                // }
+
+                &--active {
+                    color: $black;
+
+                    // svg {
+                    //     border: 2px solid $black;
+                    // }
+                }
+            }
+        }
+    }
+
+}
+
 /* ==============================================
 Projects styles
 ============================================== */
