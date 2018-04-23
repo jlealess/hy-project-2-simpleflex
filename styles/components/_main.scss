@@ -49,6 +49,19 @@ General row styles
     }
 }
 
+.button {
+
+    &--centered {
+        display: block;
+        margin: 40px auto 0;
+    }
+
+    &--wide {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+
 /* ==============================================
 Card styles
 ============================================== */
@@ -599,11 +612,6 @@ Contact section styles
                 font-weight: $font-weight-bold;
                 outline: 3px solid $yellow;
             }
-        }
-
-        .button--submit {
-            padding-left: 40px;
-            padding-right: 40px;
         }
     }
 }
