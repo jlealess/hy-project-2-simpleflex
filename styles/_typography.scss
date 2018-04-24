@@ -56,36 +56,16 @@ Headings
 }
 
 /* ==============================================
-Buttons
-============================================== */
-.button {
-    background-color: transparent;
-    border: 5px solid $white;
-    font-weight: $font-weight-bold;
-    padding: 15px;    
-    text-transform: uppercase;
-
-    &--primary {
-        color: $white;
-
-        &--contrast {
-            color: $black;
-        }
-    }
-
-    &--secondary {
-        border-color: $red;
-        color: $red;
-    }
-}
-
-
-/* ==============================================
-Articles
+Paragraphs
 ============================================== */
 
-.row {
-    &__paragraph--lead {
+.paragraph {
+
+    &--loose {
+        line-height: 1.5;
+    }
+
+    &--lead {
         font-size: 1.5rem;
         line-height: 1.5;
         margin: 0 auto 50px;
@@ -103,9 +83,53 @@ Articles
             width: 20rem;
         }
 
+        &--hero {
+            color: $light-black;
+            padding-bottom: 0;
+            text-align: left;
+
+            &::after {
+                border: 0;
+            }
+        }
+        
         @media screen and (min-width: 600px) {
             font-size: 2rem;
         }
+    }
+}
+
+/* ==============================================
+Buttons
+============================================== */
+.button {
+    background-color: transparent;
+    border: 5px solid $white;
+    font-weight: $font-weight-bold;
+    padding: 15px;    
+    text-transform: uppercase;
+
+    &--centered {
+        display: block;
+        margin: 40px auto 0;
+    }
+
+    &--primary {
+        color: $white;
+        
+        &--contrast {
+            color: $black;
+        }
+    }
+    
+    &--secondary {
+        border-color: $red;
+        color: $red;
+    }
+
+    &--wide {
+        padding-left: 50px;
+        padding-right: 50px;
     }
 }
 
@@ -151,7 +175,6 @@ Stats section styles
             font-weight: $font-weight-bold; 
             margin: 15px 0 10px;   
         }
-
     }
 }
 

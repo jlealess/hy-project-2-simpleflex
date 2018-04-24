@@ -45,16 +45,26 @@ $primary-text-color: #989898;
         border-left: solid var(--side) transparent;
     }
 }
-/* ^^ adapted from https://css-tricks.com/examples/ShapesOfCSS/ */
+/* ^^ loosely adapted from https://css-tricks.com/examples/ShapesOfCSS/ */
 
 @mixin flexRowWrap {
     display: flex;
     flex-flow: row wrap;
 }
 
-@mixin gridCol ($num) {
+@mixin gridColNum($num) {
     display: grid;
     grid-template-columns: repeat($num, 1fr);
+}
+
+@mixin gridColAutoMinmax($min) {
+    display: grid;
+    grid-template-columns: repeat( auto-fill, minmax($min, 1fr) );
+}
+
+@mixin highlightRow($color1, $color2) {
+    @include splitGradient($color1, $color2);
+    @include divotDown($color1, $color2);
 }
 
 @mixin splitGradient ($color1, $color2) {
