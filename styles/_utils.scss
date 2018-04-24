@@ -1,5 +1,6 @@
 $accent-border-width: 8px;
 $max-width: 1170px;
+$transition: all 0.5s ease;
 
 /* colors */  
 $black: #242424;
@@ -22,6 +23,11 @@ $primary-text-color: #989898;
     --top: 40px;
     --side: 50px;
 
+    @media screen and (max-width: 800px) {
+        --top: 20px;
+        --side: 20px;
+    }
+
     position: relative;
 
     &::before,
@@ -43,6 +49,7 @@ $primary-text-color: #989898;
         margin-left: calc(var(--side) * -1);
         border-top: solid var(--top) $color1;
         border-left: solid var(--side) transparent;
+
     }
 }
 /* ^^ loosely adapted from https://css-tricks.com/examples/ShapesOfCSS/ */
@@ -80,6 +87,9 @@ $primary-text-color: #989898;
 /* General styles */
 
 .wrapper {
+    left: 0;
     margin: 0 auto;
     max-width: $max-width;
+    position: relative;
+    transition: $transition;
 }

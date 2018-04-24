@@ -4,7 +4,11 @@ General row styles
 
 .row {
     &--outer {
-        padding: 80px 0;
+            padding: 40px 0;
+
+        @media screen and (min-width: 800px) {
+            padding: 80px 0;
+        }
 
         &--bottom-bleed {
             padding-bottom: 0;
@@ -176,48 +180,85 @@ Pullquote styles
     }
     &__body {
         color: $light-black;
-        font-size: 6rem;
+        font-size: 3rem;
         font-weight: $font-weight-bold;
         line-height: 1;
         margin: 30px auto;
         max-width: 15ch;
 
+        @media screen and (min-width: 600px) {
+            font-size: 4.5rem;
+        }
+        @media screen and (min-width: 800px) {
+            font-size: 6rem;
+        }
+
         &::before,
         &::after {
             color: $white;
-            font-size: 14rem;
+            font-size: 8rem;
             position: absolute;
-            top: -3rem;
+            top: -1rem;
+
+            @media screen and (min-width: 600px) {
+                font-size: 11rem;
+            }
+            @media screen and (min-width: 800px) {
+                font-size: 14rem;
+                top: -3rem;
+            }
         }
+
         &::before {
             content: "“";
-            left: -8rem;
+            left: -4rem;
+            @media screen and (min-width: 600px) {
+                left: -6rem;
+            }
+            @media screen and (min-width: 800px) {
+                left: -8rem;
+            }
         }
+
+        
         &::after {
             content: "”";
-            right: -7rem;
+            right: -3rem;
+
+            @media screen and (min-width: 600px) {
+                right: -5rem;
+            }
+            @media screen and (min-width: 800px) {
+                right: -7rem;
+            }
         }
     }
     &__cite {
         color: $white;
-        font-size: 4rem;
+        font-size: 2rem;
         font-style: normal;
+        @media screen and (min-width: 600px) {
+            font-size: 3rem;
+        }
+        @media screen and (min-width: 800px) {
+            font-size: 4rem;
+        }
 
-            &::before,
-            &::after {
-                content: "";
-                border: 1px solid $white;
-                top: 50%;
-                position: absolute;
-                width: 1.5rem;
-            }
-            &::before {
-                left: -3rem;
-            }
+        &::before,
+        &::after {
+            content: "";
+            border: 1px solid $white;
+            top: 50%;
+            position: absolute;
+            width: 1.5rem;
+        }
+        &::before {
+            left: -3rem;
+        }
 
-            &::after {
-                right: -3rem;
-            }
+        &::after {
+            right: -3rem;
+        }
     }
 }
 
@@ -456,9 +497,10 @@ Team styles
         display: inline-block;
         margin: 0 5px;
         padding: 5px;
+        transition: $transition;
 
         &:hover {
-            opacity: 0.9;
+            opacity: 0.7;
         }
 
         &--dribbble {
@@ -549,6 +591,10 @@ Portfolio
                 padding: 0 20px;
                 text-align: center;
                 text-transform: uppercase;
+
+                @media screen and (max-width: 500px) {
+                    padding: 0 10px;
+                }
     
                 &--active {
                     color: $red;

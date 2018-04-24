@@ -20,6 +20,7 @@ body {
 
 a {
     text-decoration: none;
+    transition: $transition;
 }
 
 /* ==============================================
@@ -108,6 +109,7 @@ Buttons
     font-weight: $font-weight-bold;
     padding: 15px;    
     text-transform: uppercase;
+    transition: $transition;
 
     &--centered {
         display: block;
@@ -116,6 +118,11 @@ Buttons
 
     &--primary {
         color: $white;
+
+        &:hover {
+            background-color: $white;
+            color: $black;
+        }
         
         &--contrast {
             color: $black;
@@ -125,6 +132,11 @@ Buttons
     &--secondary {
         border-color: $red;
         color: $red;
+
+        &:hover {
+            background-color: $red;
+            color: $white;
+        }
     }
 
     &--wide {

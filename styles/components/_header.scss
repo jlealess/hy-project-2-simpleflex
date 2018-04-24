@@ -10,31 +10,122 @@
     }
 }
 
-.main-nav {
-    &__list {
-        @include unstyledList;
-        @include flexRowWrap;
+.nav {
 
-        &__item {
-            padding-left: 0;
+    &--main {
+        .nav__list {
+            @include unstyledList;
+            @include flexRowWrap;
 
-            &__link {
-                border-right: 1px solid #e8e8e8;
-                color: $heading-text-color-dark;
-                display: inline-block;
-                font-size: 1.3rem;
-                margin-right: 35px;
-                padding-right: 35px;
+            &__item {
+                padding-left: 0;
 
-                &--active {
-                    color: $red;
+                &__link {
+                    border-right: 1px solid #e8e8e8;
+                    color: $heading-text-color-dark;
+                    display: inline-block;
+                    font-size: 1.3rem;
+                    margin-right: 35px;
+                    padding-right: 35px;
+                    &--active {
+                        color: $red;
+                    }
+                }
+                &:last-of-type a {
+                    margin-right: 0;
+                    padding-right: 0;
                 }
             }
+        }
+    }
 
-            &:last-of-type a {
-                margin-right: 0;
-                padding-right: 0;
+    &--mobile {
+        align-items: center;
+        background: $light-black;
+        bottom: 0;
+        display: flex;
+        flex-flow: column wrap;
+        font-size: 3.5rem;
+        justify-content: center;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        position: fixed;
+        right: -300px;
+        top: 0;
+        width: 300px;
+        transition: right 0.3s ease;
+        z-index: 20;
+
+        .nav__list {
+            &__item {
+                &__link {
+                    color: $white;
+                    display: inline-block;
+                    padding: 15px;
+                    text-decoration: none;
+                }
             }
+        }
+    }
+
+    &__toggle {
+        display: none;
+
+        &:checked + .nav--mobile {
+            right: 0;
+        }
+
+        &:checked ~ .wrapper {
+            left: -300px;
+        }
+
+        &__label {
+            align-items: center;
+            border: 2px solid $light-black;
+            color: $light-black;
+            display: inline-flex;
+            left: 20px;
+            font-size: 1rem;
+            font-weight: $font-weight-bold;
+            padding: 5px 10px;
+            position: fixed;
+            text-transform: uppercase;
+            top: 32px;
+            
+            &__text {
+                display: inline-block;
+                font-size: 1.5rem;
+                padding-left: 10px;
+            }
+        }
+    }
+}
+/* hamburglar menu styles adapted from in-class lesson */
+
+@media screen and (max-width: 699px) {
+    .nav--main {
+        display: none;
+    }
+    .main-header__logo {
+        margin: 0 auto;
+        padding: 0 10px;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .nav__toggle__label {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 700px) and (max-width: 850px) {
+    .main-header {
+        .wrapper {
+            flex-direction: column;
+        }
+        &__logo {
+            margin-bottom: 20px;
         }
     }
 }
