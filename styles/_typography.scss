@@ -1,8 +1,9 @@
 $font-weight-bold: 700;
 $font-weight-regular: 300;
-$primary-font: 'Raleway', sans-serif;
-$secondary-font: 'Open Sans', sans-serif;
-
+$primary-font: 'Raleway',
+sans-serif;
+$secondary-font: 'Open Sans',
+sans-serif;
 html {
     font-size: 62.5%;
 }
@@ -12,7 +13,6 @@ body {
     font-family: $primary-font;
     font-size: 1.4rem;
     font-weight: $font-weight-regular;
-
     @media (min-width: 600px) {
         font-size: 1.6rem;
     }
@@ -20,6 +20,8 @@ body {
 
 a {
     text-decoration: none;
+    -webkit-transition: $transition;
+    -o-transition: $transition;
     transition: $transition;
 }
 
@@ -31,33 +33,26 @@ Headings
     color: $white;
     line-height: 1.25;
     text-align: center;
-
     &--primary {
         font-size: 4rem;
         font-weight: $font-weight-regular;
         margin: 0 0 20px;
         text-transform: uppercase;
-
         @media (min-width: 700px) {
             font-size: 6rem;
         }
     }
-
     &--secondary {
         font-size: 2rem;
-
         a {
             color: $white;
-
             &:hover {
                 color: $primary-text-color;
             }
         }
-
         &-dark {
             color: $black;
         }
-
         @media (min-width: 700px) {
             font-size: 2.4rem;
         }
@@ -69,11 +64,9 @@ Paragraphs
 ============================================== */
 
 .paragraph {
-
     &--loose {
         line-height: 1.5;
     }
-
     &--lead {
         font-size: 1.5rem;
         line-height: 1.5;
@@ -82,7 +75,6 @@ Paragraphs
         position: relative;
         max-width: 50ch;
         text-align: center;
-
         &::after {
             content: "";
             border: .5px solid $primary-text-color;
@@ -91,7 +83,6 @@ Paragraphs
             position: absolute;
             width: 20rem;
         }
-
         &--hero {
             color: $light-black;
             font-size: 2rem;
@@ -99,17 +90,14 @@ Paragraphs
             margin: 0 0 30px 0;
             padding-bottom: 0;
             text-align: center;
-
             @media screen and (min-width: 651px) {
                 margin-bottom: 50px;
                 text-align: left;
             }
-
             &::after {
                 border: 0;
             }
         }
-        
         @media screen and (min-width: 600px) {
             font-size: 2rem;
         }
@@ -129,7 +117,6 @@ Paragraphs
                 line-height: .75;
             }
         }
-
         .button {
             @media screen and (max-width: 650px) {
                 display: block;
@@ -144,42 +131,38 @@ Paragraphs
 /* ==============================================
 Buttons
 ============================================== */
+
 .button {
     background-color: transparent;
     border: 5px solid $white;
     font-weight: $font-weight-bold;
-    padding: 15px;    
+    padding: 15px;
     text-transform: uppercase;
+    -webkit-transition: $transition;
+    -o-transition: $transition;
     transition: $transition;
-
     &--centered {
         display: block;
         margin: 40px auto 0;
     }
-
     &--primary {
         color: $white;
-
         &:hover {
             background-color: $white;
             color: $black;
         }
-        
         &--contrast {
             color: $black;
         }
     }
-    
     &--secondary {
         border-color: $red;
         color: $red;
-
         &:hover {
             background-color: $red;
             color: $white;
         }
     }
-
     &--wide {
         padding-left: 50px;
         padding-right: 50px;
@@ -193,11 +176,9 @@ Cards
 .card-list {
     &__item {
         text-align: center;
-
         &__paragraph {
             margin-bottom: 0;
         }
-
         &__body {
             line-height: 1.5;
         }
@@ -207,6 +188,7 @@ Cards
 /* ==============================================
 Skills section styles
 ============================================== */
+
 .skills-list {
     &__item__skill-rating {
         color: $white;
@@ -216,21 +198,19 @@ Skills section styles
     }
 }
 
-
 /* ==============================================
 Stats section styles
 ============================================== */
-.stats-list {
 
+.stats-list {
     &__item {
         text-align: center;
-
         &__stat {
             color: $black;
             font-family: $secondary-font;
             font-size: 6rem;
-            font-weight: $font-weight-bold; 
-            margin: 15px 0 10px;   
+            font-weight: $font-weight-bold;
+            margin: 15px 0 10px;
         }
     }
 }
@@ -243,9 +223,7 @@ Footer
     .heading--secondary {
         padding-bottom: 0;
     }
-
     .paragraph {
         line-height: 1.5;
     }
 }
-
