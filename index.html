@@ -84,7 +84,7 @@
         </div>
     </header>
     <main class="main-content" id="mainContent">
-        <section id="hero" class="hero row row--outer row--highlight row--highlight--secondary">
+        <section id="hero" class="section hero row row--outer row--highlight row--highlight--secondary">
             <div class="wrapper">
                 <div class="hero__text">
                     <h1 class="heading heading--primary hero__text__heading">
@@ -120,8 +120,8 @@
                 </ul>
             </div>
         </section>
-        <section id="about" class="section section--about">
-            <article class="about row row--outer row--light row--about">
+        <section id="about" class="section">
+            <div class="about row row--outer row--light row--about section--subsection">
                 <div class="wrapper">
                     <h2 class="heading heading--primary">About Us</h2>
                     <p class="paragraph--lead">Sanctus sea sed takimata ut vero voluptua. Stet clita kasd gubergren, no sea takimata sanctus est.</p>
@@ -148,9 +148,9 @@
                             </p>
                         </li>
                     </ul>
-                </div>
-            </article>
-            <article class="skills row row--outer row--dark row--skills">
+                </div><!-- /wrapper -->
+            </div><!-- /about.section--subsection -->
+            <div class="skills row row--outer row--dark row--skills section--subsection">
                 <div class="wrapper">
                     <h3 class="heading heading--primary">Our Skills</h3>
                     <p class="paragraph--lead">AIR is focusing on Web Design / WP Development / HTML&nbsp;Integration
@@ -182,9 +182,9 @@
                             </p>
                         </li>
                     </ul>
-                </div>
-            </article>
-            <aside class="aside blockquote row row--outer row--highlight row--highlight--tertiary row--tertiary row--divot-down">
+                </div><!-- /wrapper -->
+            </div><!-- /skills.section--subsection -->
+            <aside class="aside blockquote row row--outer row--highlight row--highlight--tertiary">
                 <div class="wrapper">
                     <blockquote class="aside__pullquote">
                         <p class="aside__pullquote__body">Design to express, not to impress.</p>
@@ -192,7 +192,7 @@
                     </blockquote>
                 </div>
             </aside>
-            <article class="projects row row--outer row--light row--outer--bottom-bleed row--projects">
+            <div class="projects row row--outer row--light row--outer--bottom-bleed section--subsection">
                 <div class="wrapper">
                     <h3 class="heading heading--primary">Latest Projects</h3>
                     <p class="paragraph--lead">Sanctus sea sed takimata ut vero voluptua. Stet clita kasd gubergren, no sea takimata sanctus est.
@@ -211,9 +211,9 @@
                         </button>
                     </div>
                     <!-- /slider -->
-                </div>
-            </article>
-            <article class="team row row--outer row--dark row--team">
+                </div><!-- /wrapper -->
+            </div><!-- /projects.section--subsection -->
+            <div class="team row row--outer row--dark section--subsection">
                 <div class="wrapper">
                     <h3 class="heading heading--primary">Meet the Team</h3>
                     <p class="paragraph--lead">A proud group of individuals who came together in a perfect unity to present you with this
@@ -300,9 +300,9 @@
                             </ul>
                         </li>
                     </ul>
-                </div>
-            </article>
-            <article class="stats row row--outer row--highlight row--highlight--primary">
+                </div><!-- /wrapper -->
+            </div><!-- /team.section--subsection -->
+            <div class="stats row row--outer row--highlight row--highlight--primary section--subsection">
                 <div class="wrapper">
                     <ul class="stats-list row--inner">
                         <li class="stats-list__item">
@@ -330,15 +330,15 @@
                                 Briefs wrote</a>
                         </li>
                     </ul>
-                </div>
-            </article>
-        </section>
+                </div><!-- /wrapper -->
+            </div><!-- /stats.section--subsection -->
+        </section><!-- /about.section -->
         <section id="portfolio" class="section portfolio row row--outer row--light">
             <div class="wrapper">
                 <h2 class="heading heading--primary">Our Portfolio</h2>
                 <p class="paragraph--lead">Sanctus sea sed takimata ut vero voluptua. Stet clita kasd gubergren, no sea takimata sanctus est.
                 </p>
-            </div>
+            </div><!-- /wrapper -->
             <div class="gallery">
                 <ul class="gallery__nav-list">
                     <li class="gallery__nav-list__item">
@@ -434,10 +434,9 @@
                     </li>
                 </ul>
                 <button class="button button--primary button--wide button--centered">Load more</button>
-            </div>
-
-        </section>
-        <section id="blog" class="section blog row row--outer row--dark row--blog">
+            </div><!-- /gallery -->
+        </section><!-- /portfolio.section -->
+        <section id="blog" class="section blog row row--outer row--dark">
             <div class="wrapper">
                 <h2 class="heading heading--primary">Our Blog</h2>
                 <p class="paragraph--lead">Latest from our blog, nam liber tempor cum soluta nobis eleifend option congue nihil.
@@ -484,7 +483,7 @@
                                 <button class="button--play button--round">
                                     <i class="fas fa-chevron-right fa-fw" title="Play"></i>
                                 </button>
-                            </div>
+                            </div><!-- /controls -->
                         </a>
                         <div class="blog-list__post__text blog-list__post--wide__text">
                             <h3 class="heading heading--secondary">
@@ -569,9 +568,9 @@
                     </li>
                 </ul>
                 <button class="button button--primary button--wide button--centered">View all</button>
-            </div>
-        </section>
-        <section id="contact">
+            </div><!-- /wrapper -->
+        </section><!-- /blog.section -->
+        <section id="contact" class="section">
             <div class="contact aside row row--outer row--highlight row--highlight--secondary">
                 <div class="wrapper">
                     <dl class="contact-info">
@@ -604,8 +603,8 @@
             <div class="contact__map-responsive">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13217.102818940737!2d-118.3882128325663!3d34.0880768805961!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2bebb02602b33%3A0x60072fd68413ee3c!2s8605+Santa+Monica+Blvd%2C+West+Hollywood%2C+CA+90069%2C+USA!5e0!3m2!1sen!2sca!4v1524327935640"
                     width="600" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
-            </div>
-            <article class="contact row row--outer row--dark row--contact">
+            </div><!-- /.contact__map-responsive -->
+            <div class="contact row row--outer row--dark section--secondary">
                 <div class="wrapper">
                     <h2 class="heading heading--primary">
                         Get in touch
@@ -668,13 +667,12 @@
                             <input type="submit" value="Send" class="button button--primary button--submit button--wide">
                         </div>
                     </form>
-                </div>
-            </article>
+                </div><!-- /wrapper -->
+            </div><!-- /contact.section--secondary -->
         </section>
-
     </main>
     <footer class="main-footer">
-        <aside class="aside main-footer__aside row row--outer">
+        <aside class="aside main-footer__aside row row--outer section--secondary">
             <div class="wrapper">
                 <ul class="widget-list">
                     <li class="widget-list__item widget-list__item--1">
@@ -752,7 +750,9 @@
                         <article class="widget-list__item__widget widget-list__item__widget-gallery">
                             <h2 class="heading heading--secondary heading--secondary-dark">Flickr Widget</h2>
                             <p class="paragraph widget-list__item__widget__paragraph">
-                                <img src="images/footer-4.png" alt="Our latest posts on Flickr">
+                                <a href="#">
+                                    <img src="images/footer-4.png" alt="Our latest posts on Flickr">
+                                </a>
                             </p>
                         </article>
 
