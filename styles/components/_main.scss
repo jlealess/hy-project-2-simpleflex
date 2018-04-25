@@ -35,10 +35,6 @@ General row styles
 }
 
 /* ==============================================
-Card styles
-============================================== */
-
-/* ==============================================
 Hero styles
 ============================================== */
 
@@ -432,7 +428,7 @@ Team styles
     -ms-grid-columns: ( minmax(200px, 1fr))[auto-fit];
     grid-template-columns: repeat( auto-fit, minmax(200px, 1fr));
     &--features {
-        @media screen and (min-width: 600px) and (max-width: 800px) {
+        @media screen and (min-width: 475px) and (max-width: 800px) {
             -ms-grid-columns: 1fr;
             grid-template-columns: 1fr;
         }
