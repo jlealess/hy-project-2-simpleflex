@@ -291,12 +291,7 @@ Blog styles
             -ms-grid-row: 1;
             -ms-grid-row-span: 2;
             grid-row: 1 / span 2;
-<<<<<<< HEAD
             @media screen and (min-width: 500px) and (max-width: 800px) {
-=======
-            
-            @media screen and (min-width: 600px) and (max-width: 800px) {
->>>>>>> Fixing responsive styles in about section and blog
                 border-bottom-width: 0;
                 border-right-width: 8px;
                 border-right-style: solid;
@@ -322,35 +317,19 @@ Blog styles
 
         }
         &--wide {
-<<<<<<< HEAD
             @media screen and (max-width: 499px) {
                 border-bottom-width: 8px;
                 border-bottom-style: solid;
             }
 
             @media screen and (min-width: 500px) {
-=======
-            @media screen and (max-width: 599px) {
-                border-bottom-style: solid;
-                border-bottom-width: var(--border-weight);
-
-            }
-            
-            @media screen and (min-width: 600px) {
->>>>>>> Fixing responsive styles in about section and blog
                 border-right-width: 8px;
                 border-right-style: solid;
                 display: -ms-grid;
                 display: grid;
                 -ms-grid-columns: 3fr 4fr;
                 grid-template-columns: 3fr 4fr;
-<<<<<<< HEAD
             }
-=======
-
-            }
-
->>>>>>> Fixing responsive styles in about section and blog
             &__link--img {
                 display: flex;
                 -webkit-box-align: center;
